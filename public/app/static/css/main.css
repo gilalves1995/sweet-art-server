@@ -1,0 +1,747 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+
+body {
+    background-color: #34495e;
+}
+
+h2, h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+    color: #fff;
+    text-align: left;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+
+/* NAVBAR STYLE */ 
+
+.navbar-item-list li {
+    text-transform: uppercase;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.navbar-icon-list li {
+    padding-left: 20px;
+}
+
+.notification {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.badge-container {
+    position: absolute;
+    top: 0px;  /* 20% */
+    right: 25px; /* 7% */
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+    border-radius: 100%;
+    line-height: 15px;
+    background-color: red;
+    color: white;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.gender-group {
+    float: left;
+    display: inline-flex;
+    padding: 2px;
+    color: white;
+    font-size: 85%;
+}
+
+
+
+/* ART PIECE LIST */
+
+.art-piece-list {
+    margin-top: 15px;
+}
+
+.art-piece-list li {
+    /*border: 1px solid black;*/
+    display: inline-block;
+    list-style: none;
+    float: left;
+    width: 30%;
+    margin: 10px;
+    height: 300px;
+    max-height: 300px;
+}
+
+.art-piece-item img {
+    width: 225px;
+    height: 225px;
+    display: block;
+    margin: 0 auto;
+}
+
+.art-piece-item img:hover {
+    cursor: pointer;
+    animation: select;
+    animation-duration: 0.5s;
+    opacity: 0.5;
+}
+
+
+@keyframes select {
+  from {	
+    opacity: 1;
+    
+  }
+  to {
+    opacity: 0.5;
+    
+  }
+}
+
+
+
+.art-piece-info {
+    /*border: 1px solid black;*/
+    width: 225px;
+    padding-top: 10px;
+    margin: 0 auto;
+    font-family: 'Lato';
+    color: #fff;
+    font-weight: 100;
+    font-size: 80%;
+    text-align: center;
+}
+
+
+.after-item-click {
+    width: 225px;
+    padding-top: 10px;
+    margin: 0 auto;
+    font-family: 'Lato';
+    color: #fff;
+    font-weight: 100;
+    font-size: 80%;
+    text-align: center;
+    animation-duration: 0.9s;
+    animation-name: displayOptionsAnim; 
+}
+
+
+@keyframes displayOptionsAnim {
+  from {	
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.links {
+    color: #fff;
+}
+
+.links:hover {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link_proceed {
+    font-size: 70%;
+    color: grey;
+}
+
+/* ADD ITEM BUTTON */
+
+.add-item-button {
+    position: fixed;
+    bottom: 50px;
+    right: 75px;   
+    
+}
+
+.add-item-button i {
+    font-size: 40px !important;
+}
+
+.go-back-button {
+    position: fixed;
+    bottom: 50px;
+    right: 170px;
+}
+
+.go-back-button i {
+    font-size: 40px !important;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: #292b2c;
+    border: 1px solid #292b2c;
+}
+
+.btn-primary:hover {
+    background-color: #393c3e !important;
+    border: 1px solid #393c3e !important;
+    cursor: pointer;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+
+
+/* MODAL WINDOW */
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    zIndex: 9998;
+    background: rgba(0, 0, 0, 0.8);
+    animation-duration: 0.5s;
+    animation-name: fadeIn; 
+}
+
+
+
+@keyframes fadeIn {
+  from {	
+    /*opacity: 0;*/
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    /*opacity: 0.8;*/
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* MODAL WINDOW CONTENTS */
+
+.pos-action-window {
+    animation: posActionAnimation;
+    animation-duration: 0.5s;
+}
+
+@keyframes posActionAnimation {
+  from {	
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+}
+
+.modal-contents {
+    margin: 15px 5% 15px 5%; 
+}
+
+.modal-window-delete {
+    margin: 15px 5% 15px 5%;
+    font-family: 'Lato', 'Arial', sans-serif;
+    color: #fff;
+    font-weight: 100;
+    text-align: left;
+    
+}
+
+.note {
+    font-size: 15px;
+}
+
+
+/* MODAL WINDOW INPUTS */
+
+.checkbox-label {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #fff;
+    margin-left: 5px;
+}
+
+
+.modal-input {
+    height: 35px;
+    font-size: 15px;
+}
+
+.inline-elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inline-elements button {
+    font-size: 15px;
+}
+
+.inline-inputs .element1 {
+    float: left;
+    width: 49%;
+    
+}
+
+.inline-inputs .element2 {
+    float: left;
+    width: 49%;
+    margin-left: 2%;
+}
+
+textarea {
+    resize: none;
+    font-size: 15px !important;
+    border: 1px solid black;
+}
+
+button[disabled] {
+    pointer-events: none;
+    background-color: dimgray !important;
+    border: 1px solid dimgray !important;
+}
+
+.failed-validation-msg {
+    font-size: 13px;
+    color: #C0392B;
+    animation: displayOptionsAnim;
+    animation-duration: 0.5s;
+    text-align: left;
+}
+
+.added-images-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.added-images-list li {
+    font-size: 'Lato';
+    font-weight: 100;
+    font-size: 13px;
+    color: #fff;
+    animation: displayOptionsAnim;
+    animation-duration: 0.5s;
+    text-align: left;
+}
+
+.image-add-section {
+    width: 100%;
+    height: 40px;
+}
+
+.image-add-section .image-add-input {
+    float: left;
+    width: 40%;    
+}
+
+.image-add-fail {
+    height: 40px;
+    float: left;
+    width: 30%;
+    font-size: 13px;
+    color: #C0392B;
+    animation: displayOptionsAnim;
+    animation-duration: 0.5s;
+    text-align: left;
+}
+
+.image-add-btn {
+    width: 50px;
+    height: 30px;
+    float: left;
+    margin-left: 5px;
+}
+
+.image-add-btn button {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+
+.image-add-btn i {
+    font-size: 15px !important;
+}
+
+.modal-label {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+
+
+
+/* PIECE DETAILS PAGE */
+
+.multiple-image-section {
+    width: 500px;
+    list-style: none;
+    text-align: justify;
+    
+}
+
+.multiple-image-section li {
+    display: inline;
+    
+}
+
+.multiple-image-section li img {
+    width: 20%;
+    height: 100px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.multiple-image-section li img:hover {
+    cursor: pointer;
+    animation: select;
+    animation-duration: 0.5s;
+    opacity: 0.5;
+}
+
+.piece-details img {
+    width: 500px;
+    height: 450px;
+    float: left;
+}
+
+.textual-details {
+    float: left;
+    margin-left: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 120%;
+    max-width: 500px;
+    word-wrap: break-word;
+    
+}
+
+.textual-details p {
+    line-height: 120%;
+}
+
+.detail-element {
+    margin-left: 15px;
+    letter-spacing: 1px;
+}
+
+.keyword-list {
+    list-style: none;
+    display: inline;
+    margin-left: 10px;
+}
+
+.keyword-list li {
+    display: inline;
+    margin-right: 10px;  
+}
+
+.keyword-list li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.display-inline strong {
+    display: inline; 
+}
+
+.bid-option input, .bid-option button {
+    float: left;
+}
+
+
+/* GENERAL ART PIECE PAGE */
+
+.public-item-list {
+    list-style: none;
+    display: inline-block;
+}
+
+.public-item-list li {
+    width: 180px;
+    height: 270px; 
+    float: left;
+    margin: 15px;
+}
+
+.public-img-content img {
+    width: 100%;
+    height: 170px;
+}
+
+.public-img-content img:hover {
+    cursor: pointer;
+    animation: select;
+    animation-duration: 0.5s;
+    opacity: 0.5;
+}
+
+.public-item-info {
+    width: 95%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+    margin: 5px;
+    font-family: 'Lato';
+}
+
+.most-bidded-section {
+    text-align: left;
+}
+
+.most-bidded-section h5 {
+    font-family: 'Lato';
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-size: 20px;
+    border-bottom: 0.001em solid #fff;
+    padding-bottom: 10px;
+}
+
+/* Login and Register page*/
+
+.loginscreen {
+    text-align:center;
+    margin-bottom: 50px; margin-top: 50px; margin-left: 50px; margin-right: 50px;
+    display: inline-block;  
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.loginmessage {
+    float: left;
+    font-style: oblique;
+    font-family: verdana;
+    font-size: 15px;
+    text-align: center;
+}
+
+.registrationdiv {
+    float: right;
+    width: 35%;  
+}
+
+.togglebutton {
+    font-size: 85%;
+}
+
+.centeredscreen {
+    text-align: center;
+}
+
+
+/* NOTIFICATIONS */
+
+.empty-notification-box {
+    font-size: 15px;
+    padding: 10px;
+    background-color: #ecf0f1;  /*important  ecf0f1*/
+    overflow: hidden;
+    word-break: break-word;
+    white-space: normal;
+    word-spacing: 2px;
+    width: 100%;
+    pointer-events:none;
+}
+
+.notification-list, .user-dropdown-list {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    background-color: #292b2c;
+    margin-bottom: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.notification-list {
+    width: 400px;
+}
+
+.user-dropdown-list {
+    width: 200px;
+}
+
+
+.not-accepted-offer-section {
+    padding: 200px;   
+    text-align: center;
+}
+
+.notification-header {
+    height: 25px;
+    color: #ecf0f1;
+    font-size: 15px;
+    padding-left: 10px;
+    font-weight: 300;
+    background-color: #95a5a6;
+} 
+
+.notification-header2 {
+    height: auto;
+    color: #ecf0f1;
+    font-size: 15px;
+    padding-left: 10px;
+    font-weight: 300;
+    display: block;
+    background-color: #95a5a6;
+}
+
+.notification-item, .user-dropdown-item {
+    font-size: 15px;
+    padding: 10px;
+    background-color: #ecf0f1;  /*important  ecf0f1*/
+    overflow: hidden;
+    word-break: break-word;
+    white-space: normal;
+    word-spacing: 2px;
+    width: 100%;
+    border-bottom: 1px solid #95a5a6;
+}
+
+.notification-item {
+    height: 70px; 
+    max-height: 70px;
+}
+
+.user-dropdown-item {
+    height: 40px;
+    max-height: 40px;
+    cursor: pointer;
+}
+
+.notification-item:hover, .user-dropdown-item:hover {
+    background: #bbc9cd !important;
+    animation: hover;
+    animation-duration: 0.5s;
+}
+
+.notification-item figure img {
+    width: 50px;
+    height: 50px;
+}
+
+.notification-item figure {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.notification-item strong {
+    float: left;
+    width: 82%;
+    margin-left: 10px;
+    max-height: 95%; 
+    overflow: hidden;
+}
+
+@keyframes hover {
+  from {	
+    background-color: #ecf0f1;
+      
+  }
+  to {
+    background-color: #bbc9cd;
+  }
+}
+
+
+.notification-page-main-section {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-weight: 100;
+}
+
+.offer-details {
+    margin-top: 5%;
+    width: 1000px;
+    height: 350px;
+    max-height: 350px;
+}
+
+.offer-details h4 {
+    font-weight: 100;
+}
+
+.offer-details figure {
+    float: left;
+}
+
+.offer-details figure img {
+    width: 250px;
+    height: 250px;
+    
+}
+
+.offer-details section {
+    float: left;
+    margin-left: 20px;
+}
+
+.offer-details section div {
+    font-size: 17px;
+    word-spacing: 2px;
+}
+
+
+.button-section button {
+    width: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
